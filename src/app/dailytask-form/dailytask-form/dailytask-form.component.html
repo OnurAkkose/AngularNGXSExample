@@ -1,0 +1,7 @@
+<form [formGroup]="dailyTaskForm" (submit)="submitTask()">
+    <label style="margin-left: 20px;" for="title">
+      <h5>New Task</h5>
+    </label>
+    <input style="margin-left: 20px;" class="form-control" type="text" id="title" formControlName="titlePl"><br><br>
+    <button style="margin-left: 20px; width: 100px;"class = "btn btn-primary form-group" type="submit">Create</button>
+  </form>

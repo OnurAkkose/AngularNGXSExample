@@ -1,0 +1,12 @@
+<h2>My Tasks ({{ uncheckedTodos | async }})</h2>
+
+<hr>
+<ul >
+  <li class="todo-item" [class.done]="task.done" *ngFor="let task of tasks | async">
+    <input type="checkbox" [checked]="task.done" (change)="getTask(task)">
+    <button class="bn btn-danger" (click)="deleteTask(task)">Sil</button>
+    
+    {{ task.title }}
+  </li>
+</ul>
+
